@@ -21,7 +21,7 @@ const result = computed(() => {
 
     switch (operacao) {
         case 'soma':
-            return (num1 + num2).toFixed(2); // Formata o resultado com 2 casas decimais
+            return (num1 + num2).toFixed(2);
         case 'subtracao':
             return (num1 - num2).toFixed(2);
         case 'multiplicacao':
