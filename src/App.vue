@@ -21,26 +21,27 @@ const result = computed(() => {
 
     switch (operacao) {
         case 'soma':
-            return num1 + num2;
+            return (num1 + num2).toFixed(2); // Formata o resultado com 2 casas decimais
         case 'subtracao':
-            return num1 - num2;
+            return (num1 - num2).toFixed(2);
         case 'multiplicacao':
-            return num1 * num2;
+            return (num1 * num2).toFixed(2);
         case 'divisao':
-            return num2 !== 0 ? num1 / num2 : 'Erro: divisão por zero';
+            return num2 !== 0 ? (num1 / num2).toFixed(2) : 'Erro: divisão por zero';
         default:
             return 'Operação inválida';
     }
 });
+
 
 provide('state', state);
 provide('result', result);
 </script>
 
 <template>
-  <div class="container">
-    <Header />
-    <FormCalc />
-    <Result />
-  </div>
+    <div class="container">
+        <Header />
+        <FormCalc />
+        <Result />
+    </div>
 </template>
